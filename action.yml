@@ -10,7 +10,7 @@ inputs:
     # description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/commercetools/telefonistka:alpine-v1.17.3'
+  image: 'docker://ghcr.io/commercetools/telefonistka:alpine-v1.19.0'
   entrypoint: /telefonistka/bin/telefonistka
   args:
     - event
