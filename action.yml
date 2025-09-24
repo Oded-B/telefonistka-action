@@ -1,5 +1,5 @@
 name: 'Unofficial Telefonistka GitHub Action'
-description: 'Safe and Controlled GitOps Promotion Across Environments/Failure-Domains https://github.com/wayfair-incubator/telefonistka'
+description: 'Safe and Controlled GitOps Promotion Across Environments/Failure-Domains https://github.com/commercetools/telefonistka'
 inputs:
   repo-token:
     description: 'The GitHub token used to manage labels'
@@ -10,7 +10,7 @@ inputs:
     # description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'docker://wayfaiross/telefonistka:v0.1.4'
+  image: 'docker://ghcr.io/commercetools/telefonistka:alpine-v1.17.3'
   entrypoint: /telefonistka/bin/telefonistka
   args:
     - event
