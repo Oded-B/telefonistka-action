@@ -10,12 +10,12 @@ inputs:
     # description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'docker://wayfaiross/telefonistka:v0.1.4'
-  entrypoint: /telefonistka/bin/telefonistka
+  image: 'docker://ghcr.io/commercetools/telefonistka:alpine-v1.20.0'
+  entrypoint: /usr/local/bin/telefonistka
   args:
     - event
     # - ${{ inputs.who-to-greet }}
   env:
     GITHUB_OAUTH_TOKEN: ${{ inputs.repo-token }}
     APPROVER_GITHUB_OAUTH_TOKEN: ${{ inputs.repo-token }}
-    TEMPLATES_PATH: "/telefonistka/templates/"
+    TEMPLATES_PATH: "/srv/templates/"
